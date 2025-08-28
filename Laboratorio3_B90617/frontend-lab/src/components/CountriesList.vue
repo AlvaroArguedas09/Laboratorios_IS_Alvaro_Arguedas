@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="container mt-5">
-        <h1 class="display-4 text-center">Lista de paises</h1>
+        <h1 class="display-4 text-center">Lista de países</h1>
         <table class="table is-bordered is-striped is-narrow is-hoverable
           is-fullwidth">
             <thead>
@@ -18,7 +18,7 @@
                     <td>{{ country.language}}</td>
                     <td>
                         <button class="btn btn-secondary btn-sm">Editar</button>
-                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                        <button class="btn btn-danger btn-sm" @click="deleteCountry(index)">Eliminar</button>
                     </td>
                 </tr>
             </tbody>
@@ -39,6 +39,14 @@
             { name: "Alemania", continent: "Europa", language: "Alemán" }
             ], 
           };
+      },
+      methods: {
+          
+          deleteCountry(index) {
+          
+             this.countries.splice(index, 1);
+             
+         },
       },
   }
 </script>
