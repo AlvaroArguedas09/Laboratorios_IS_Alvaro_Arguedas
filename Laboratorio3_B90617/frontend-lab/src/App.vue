@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <CountriesList />
 </template>
 
