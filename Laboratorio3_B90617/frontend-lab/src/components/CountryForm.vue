@@ -30,12 +30,13 @@
                     </select>
                 </div>
                 <div class="form-group">
-                <label for="idioma">Idioma:</label> 
-                <input v-model="formData.Language" 
-                  type="text" id="idioma" class="form-control" required />
-                </div> 
-                <div> 
-                <button type="submit" class="btn btn-success btn-block"> Guardar </button> </div>
+                    <label for="idioma">Idioma:</label>
+                    <input v-model="formData.Language"
+                           type="text" id="idioma" class="form-control" required />
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success btn-block"> Guardar </button>
+                </div>
             </form>
         </div>
     </div>
@@ -43,6 +44,8 @@
 
 
 <script>
+import axios from "axios";
+
     export default {
         data() {
             return {
@@ -53,8 +56,21 @@
         methods: {
             saveCountry() {
                 console.log("Datos a guardar:", this.formData)
+
+                axios.post("https://localhost:7214/api/Country", {
+                        Name: this.formData.Name,
+                        Continent: this.formData.Continent,
+                        Language: this.formData.Language,
+                    })
+                    .then(function (response) {
+                        console.log(response);
+                        window.location.href = "/";
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
             },
-        }
+        },
     }
 </script>
 
