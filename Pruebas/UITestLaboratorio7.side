@@ -1,0 +1,139 @@
+{
+  "id": "31aad15f-f46b-4de7-a923-159d1e6fd5ef",
+  "version": "2.0",
+  "name": "UITestLaboratorio7",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "a1964f21-6634-4ef8-a724-55cfe2ec4ed9",
+    "name": "PruebaUIUno",
+    "commands": [{
+      "id": "7c01bc3f-d928-443b-8419-fe11f7e9db59",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3fb5b7d-ec05-432c-865b-0a7e2ea74b8d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.display-4",
+      "targets": [
+        ["css=.display-4", "css:finder"],
+        ["xpath=//div[@id='app']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Lista de países')]", "xpath:innerText"]
+      ],
+      "value": "Lista de países"
+    }, {
+      "id": "c18c8fbb-b116-47e2-b31f-044e7f3d6fbb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(2)",
+      "targets": [
+        ["css=th:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div/table/thead/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'Continente')]", "xpath:innerText"]
+      ],
+      "value": "Continente"
+    }, {
+      "id": "dc228e17-d280-4875-b0c1-442f6cec5114",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(7) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(7) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='app']/div/table/tbody/tr[7]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9c6c9e9-c14c-4131-9cb8-5a3e9abc396e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(3)",
+      "targets": [
+        ["css=th:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='app']/div/table/thead/tr/th[3]", "xpath:idRelative"],
+        ["xpath=//th[3]", "xpath:position"],
+        ["xpath=//th[contains(.,'Idioma')]", "xpath:innerText"]
+      ],
+      "value": "Idioma"
+    }, {
+      "id": "510adf68-2a92-4793-9b61-7a36dcfada76",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "css=tr:nth-child(1) .btn-danger",
+      "targets": [
+        ["css=tr:nth-child(1) .btn-danger", "css:finder"],
+        ["xpath=//div[@id='app']/div/table/tbody/tr/td[4]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "831fcb58-86b0-4b51-b013-349b2d6d3a01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline-secondary",
+      "targets": [
+        ["css=.btn-outline-secondary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar país')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9426e409-493e-42b6-8d5b-2b47798593e1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//div[@id='app']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Formulario para crear un país')]", "xpath:innerText"]
+      ],
+      "value": "Formulario para crear un país"
+    }, {
+      "id": "a99b30ab-c82c-49db-b3fe-b290e9371451",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1037x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e64656d-675c-44c8-ba29-90db1c935e08",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79771b62-8d5d-4e37-8edf-741a3272468c",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "frontend-lab",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "aa964eb8-ae74-4acf-b4fd-36723e393bd0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a1964f21-6634-4ef8-a724-55cfe2ec4ed9"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
